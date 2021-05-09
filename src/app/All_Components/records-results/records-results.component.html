@@ -1,0 +1,22 @@
+<br>
+<div *ngIf="information.UserName == null; then MTB else MEB"></div>
+<ng-template #MTB><p>Record Not Found!</p></ng-template>
+<ng-template #MEB>
+
+<div *ngIf="information.UserName == ''; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock></ng-template>
+<ng-template #elseBlock>
+Name : {{information.UserName}}<br>
+EmailAdress : {{information.EmailAdress}}<br>
+Matched Account  : {{information.CountMatchedAccount}}<br>
+Matched with  : {{information.MatchedAccounts}}<br>
+Percentage : {{information.Results_Percentage}}<br>
+<div *ngIf="information.Remarks == 'Verified' then tb else eb"></div>
+<ng-template #tb>
+    <p style="float: left;">Remarks :</p> <p style="color: #4ba033;float: left;">{{information.Remarks}} Account</p>
+</ng-template>
+<ng-template #eb>
+    <p style="float: left;">Remarks :</p> <p style="color: red;float: left;">{{information.Remarks}} Account</p>
+</ng-template>
+</ng-template>
+</ng-template>

@@ -1,0 +1,13 @@
+.btn-success {
+    color: #fff;
+    background-color: #4ba033;
+    border: none;
+}
+
+input[type="checkbox"]{
+    margin-right: 12px;
+    margin-left: 12px;
+}
+.img-thumbnail{
+    border: none!important;
+}
